@@ -315,9 +315,6 @@ p.about-p {
 		box-shadow: none;
 		width: 100px;
 	}
-	.sub-grid {
-		grid-template-columns: 200px 200px;
-	}
 }
 /* about page end */
 /* photos page start */
@@ -702,6 +699,7 @@ section.films-grid {
 	flex-direction: column;
 	font-family: var(--font-pmry);
 	color: #fff;
+	margin-top: -100px;
 }
 
 .itemRight {
@@ -870,6 +868,7 @@ section.films-grid {
 	.itemLeft {
 		border-top-left-radius: 3rem;
 		border-bottom-left-radius: 3rem;
+		margin-top: 0;
 	}
 }
 /* contact end */
@@ -968,4 +967,79 @@ section.films-grid {
 	object-fit: cover;
 	border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+	.photos-container {
+		justify-content: center;
+	}
+}
 /* photos end */
+
+/* slider start */
+.switch > input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.switch {
+	position: fixed;
+	display: block;
+	width: 70px;
+	height: 34px;
+	bottom: 20px;
+	right: 30px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	background-color: #18a2f0;
+	height: 100%;
+	width: 100%;
+	border-radius: 70px;
+	transition: background-color 350ms ease-in-out;
+}
+
+.slider::before {
+	content: '';
+	height: 27px;
+	width: 27px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 3px;
+	border-radius: 50%;
+	transition: left 350ms ease-in-out;
+	z-index: 2;
+}
+
+.darkmode-toggle:checked + .slider {
+	background-color: #545389;
+}
+
+.darkmode-toggle:checked + .slider::before {
+	left: 55%;
+	background-color: #d2dfff;
+}
+
+.darkmode-toggle:checked + .slider::after {
+	background-image: url(../images/moon_a.svg);
+	background-position: 10% 50%;
+}
+
+.slider::after {
+	content: '';
+	background-image: url(../images/sun.svg);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+	left: 0;
+	z-index: 1;
+}
+/* slider end */
