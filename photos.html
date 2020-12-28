@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Photos - Abstract</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="apple-touch-icon" href="images/favicon.png" />
+	</head>
+	<body>
+		<nav>
+			<img src="images/logo.svg" alt="logo" class="nav-img" />
+			<ul class="nav-ul">
+				<li class="nav-li"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-li"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-li"><a href="#" class="nav-link">Photos</a></li>
+				<li class="nav-li">
+					<a href="#" class="nav-link">Filmmaking</a>
+				</li>
+				<li class="nav-li">
+					<a href="#" class="nav-link active">Coding and Design</a>
+				</li>
+				<li class="nav-li"><a href="#" class="nav-link">Contact</a></li>
+			</ul>
+		</nav>
+		<main style="margin-top: 100px">
+			<div class="lightbox_images">
+				<div class="fullSizeImage" id="img1">
+					<div class="content_lightbox">
+						<a href="#!" class="close">&times;</a>
+						<img
+							src="https://farm5.staticflickr.com/4858/44897303965_b0b6999735_c.jpg"
+							class="imgP"
+						/>
+						<p class="captionImg">Stink bug</p>
+						<a href="#img0" class="arr arrL"><</a>
+						<a href="#img2" class="arr arrR">></a>
+					</div>
+				</div>
+				<div class="fullSizeImage" id="img2">
+					<div class="content_lightbox">
+						<a href="#!" class="close">&times;</a>
+						<img
+							src="https://c1.staticflickr.com/3/2903/33934241476_d390741dc4_c.jpg"
+							class="imgP"
+						/>
+						<p class="captionImg">poppy pistil</p>
+						<a href="#img1" class="arr arrL"><</a>
+						<a href="#img3" class="arr arrR">></a>
+					</div>
+				</div>
+				<div class="fullSizeImage" id="img3">
+					<div class="content_lightbox">
+						<a href="#!" class="close">&times;</a>
+						<img
+							src="https://c1.staticflickr.com/1/290/32457138746_9e8ed2e957_c.jpg"
+							class="imgP"
+						/>
+						<p class="captionImg">common house fly</p>
+						<a href="#img2" class="arr arrL"><</a>
+						<a href="#img4" class="arr arrR">></a>
+					</div>
+				</div>
+			</div>
+
+			<h1 class="title-about title-cd" style="margin-left: 20px">ABSTRACT</h1>
+			<section class="photos-container">
+				<a href="#img1">
+					<img
+						src="https://farm5.staticflickr.com/4858/44897303965_b0b6999735_n.jpg"
+						height="200px"
+						width="300px"
+						class="photoP"
+					/> </a
+				><a href="#img2">
+					<img
+						src="https://c1.staticflickr.com/3/2903/33934241476_d390741dc4_n.jpg"
+						height="200px"
+						width="300px"
+						class="photoP"
+					/> </a
+				><a href="#img3">
+					<img
+						src="https://c1.staticflickr.com/1/290/32457138746_9e8ed2e957_n.jpg"
+						height="200px"
+						width="300px"
+						class="photoP"
+					/>
+				</a>
+			</section>
+		</main>
+		<script src="js/nav.js"></script>
+		<script src="js/lightbox.js"></script>
+	</body>
+</html>
