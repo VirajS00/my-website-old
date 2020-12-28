@@ -11,7 +11,11 @@
 	<body>
 		<main>
 			<label class="switch">
-				<input type="checkbox" class="darkmode-toggle" />
+				<input
+					type="checkbox"
+					class="darkmode-toggle"
+					aria-label="dark mode toggle"
+				/>
 				<span class="slider"></span>
 			</label>
 			<section
@@ -152,14 +156,30 @@ document.querySelector('form').addEventListener('submit', e => {
 			const switchT = document.querySelector('.darkmode-toggle');
 			let link;
 
+			const changeArrowColour = () => {
+				const topPos = document.querySelector('.content-top').offsetTop;
+				if (switchT.checked) {
+					document.body.style.setProperty('--arrow-clr', '#fff');
+				} else {
+					if (window.pageYOffset > topPos) {
+						document.body.style.setProperty('--arrow-clr', '#000');
+					} else {
+						document.body.style.setProperty('--arrow-clr', '#fff');
+					}
+				}
+			};
+
 			switchT.addEventListener('click', () => {
+				topPos = document.querySelector('.content-top').offsetTop;
 				if (document.body.querySelector('link') !== null) {
 					document.body.querySelector('link').remove();
 				}
 				if (switchT.checked) {
 					link = 'css/prism-duotone-dark.css';
+					document.body.style.setProperty('--arrow-clr', '#fff');
 				} else {
 					link = 'css/prism.css';
+					window.addEventListener('scroll', changeArrowColour);
 				}
 				const linkTag = document.createElement('link');
 				linkTag.rel = 'stylesheet';
@@ -169,16 +189,10 @@ document.querySelector('form').addEventListener('submit', e => {
 
 			if (switchT.checked) {
 				link = 'css/prism-duotone-dark.css';
+				document.body.style.setProperty('--arrow-clr', '#fff');
 			} else {
 				link = 'css/prism.css';
-				const topPos = document.querySelector('.content-top').offsetTop;
-				window.addEventListener('scroll', () => {
-					if (window.pageYOffset > topPos) {
-						document.body.style.setProperty('--arrow-clr', '#000');
-					} else {
-						document.body.style.setProperty('--arrow-clr', '#fff');
-					}
-				});
+				window.addEventListener('scroll', changeArrowColour);
 			}
 			const linkTag = document.createElement('link');
 			linkTag.rel = 'stylesheet';
