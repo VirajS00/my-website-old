@@ -73,12 +73,6 @@ section.title-section > h1.title {
 	font-size: 3rem;
 }
 
-section.content-top > article.top-text > p {
-	font-family: var(--font-pmry);
-	margin: 2rem 1.5rem;
-	color: var(--text-clr);
-}
-
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;

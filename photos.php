@@ -63,21 +63,22 @@
 					}
 				?>
 			</div>
-
-			<h1 class="title-about title-cd" style="margin-left: 20px"><?php echo strtoupper($category); ?></h1>
-			<section class="photos-container">
-					<?php
-						$q2 = 'SELECT url_small FROM images WHERE categ_id = '.$categ_id. ' ORDER BY sort';
-						$r2 = mysqli_query($conn, $q2);
-						$a = 1;
-						while($ro = mysqli_fetch_array($r2)) {
-							echo "<a href='#img$a'>";
-							echo "<img src='".$ro['url_small']."' height='200px' width='300px' class='photoP' /> </a>";
-							$a++;
-						}
-					?>
-			</section>
-		</main>
+			<div class="photos-c">
+				<h1 class="title-about title-cd" style="margin-left: 20px"><?php echo strtoupper($category); ?></h1>
+				<section class="photos-container">
+						<?php
+							$q2 = 'SELECT url_small FROM images WHERE categ_id = '.$categ_id. ' ORDER BY sort';
+							$r2 = mysqli_query($conn, $q2);
+							$a = 1;
+							while($ro = mysqli_fetch_array($r2)) {
+								echo "<a href='#img$a'>";
+								echo "<img src='".$ro['url_small']."' height='200px' width='300px' class='photoP' /> </a>";
+								$a++;
+							}
+						?>
+				</section>
+			</main>
+		</div>
 		<script src="js/nav.js"></script>
 		<script src="js/lightbox.js"></script>
 		<script src="js/darkmode.js"></script>

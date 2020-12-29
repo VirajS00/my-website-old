@@ -435,6 +435,12 @@ a.photo-categ-link:hover article.photo-categ-box {
 		width: 80%;
 		max-width: 960px;
 	}
+	.photos-c {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -712,6 +718,11 @@ section.films-grid {
 	top: 15px;
 	right: 20px;
 	font-size: 2rem;
+	transition: color 250ms ease;
+}
+
+.filmE > .right-side > a.close1:hover {
+	color: #b00000;
 }
 
 @media screen and (min-width: 768px) {

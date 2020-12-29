@@ -1,6 +1,6 @@
 <?php
-	include('webadmin/getData.php');
 	include('php/connect.php');
+	include('webadmin/getData.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
