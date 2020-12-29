@@ -995,7 +995,7 @@ section.films-grid {
 .close {
 	position: relative;
 	top: 15px;
-	left: 98%;
+	left: 88%;
 	color: #fff;
 	font-size: 1.8em;
 	text-decoration: none;
@@ -1006,6 +1006,7 @@ section.films-grid {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
+	z-index: 2;
 }
 
 .captionImg {
@@ -1022,6 +1023,7 @@ section.films-grid {
 	gap: 20px;
 	grid-template-columns: repeat(auto-fill, 300px);
 	margin-left: 20px;
+	margin-bottom: 50px;
 }
 
 .photoP {
@@ -1031,10 +1033,36 @@ section.films-grid {
 	border-radius: 0.5rem;
 }
 
+.imgP {
+	max-width: 800px;
+	width: 90%;
+	position: relative;
+}
+
 @media screen and (max-width: 768px) {
 	.photos-container {
 		justify-content: center;
 		margin-bottom: 50px;
+	}
+	.arr {
+		display: block;
+	}
+	.arrR {
+		right: 5%;
+	}
+
+	.arrL {
+		left: 0px;
+	}
+	.fullSizeImage {
+		position: fixed;
+	}
+	.imgP {
+		width: 100%;
+	}
+	.close {
+		position: absolute;
+		top: 89%;
 	}
 }
 /* photos end */

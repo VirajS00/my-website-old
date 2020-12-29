@@ -1,9 +1,19 @@
+<?php
+	include('php/connect.php');
+	$categ_id = $_GET['categ_id'];
+	$q1 = 'SELECT category FROM images WHERE categ_id = '.$categ_id. ' LIMIT 1';
+	$r1 = mysqli_query($conn, $q1);
+	$data = mysqli_fetch_object($r1);
+	$category = $data->category;
+	$q = 'SELECT caption, img_path FROM images WHERE categ_id = '.$categ_id. ' ORDER BY sort';
+	$r = mysqli_query($conn, $q);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Photos - Abstract</title>
+		<title>Photos - <?php echo $category; ?></title>
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
@@ -12,9 +22,9 @@
 		<nav>
 			<img src="images/logo.svg" alt="logo" class="nav-img" />
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="index.php" class="nav-link active">Home</a></li>
+				<li class="nav-li"><a href="index.php" class="nav-link">Home</a></li>
 				<li class="nav-li"><a href="about.php" class="nav-link">About</a></li>
-				<li class="nav-li"><a href="photoCateg.php" class="nav-link">Photos</a></li>
+				<li class="nav-li"><a href="photoCateg.php" class="nav-link active">Photos</a></li>
 				<li class="nav-li">
 					<a href="films.php" class="nav-link">Filmmaking</a>
 				</li>
@@ -34,68 +44,37 @@
 				<span class="slider"></span>
 			</label>
 			<div class="lightbox_images">
-				<div class="fullSizeImage" id="img1">
-					<div class="content_lightbox">
-						<a href="#!" class="close">&times;</a>
-						<img
-							src="https://farm5.staticflickr.com/4858/44897303965_b0b6999735_c.jpg"
-							class="imgP"
-						/>
-						<p class="captionImg">Stink bug</p>
-						<a href="#img0" class="arr arrL"><</a>
-						<a href="#img2" class="arr arrR">></a>
-					</div>
-				</div>
-				<div class="fullSizeImage" id="img2">
-					<div class="content_lightbox">
-						<a href="#!" class="close">&times;</a>
-						<img
-							src="https://c1.staticflickr.com/3/2903/33934241476_d390741dc4_c.jpg"
-							class="imgP"
-						/>
-						<p class="captionImg">poppy pistil</p>
-						<a href="#img1" class="arr arrL"><</a>
-						<a href="#img3" class="arr arrR">></a>
-					</div>
-				</div>
-				<div class="fullSizeImage" id="img3">
-					<div class="content_lightbox">
-						<a href="#!" class="close">&times;</a>
-						<img
-							src="https://c1.staticflickr.com/1/290/32457138746_9e8ed2e957_c.jpg"
-							class="imgP"
-						/>
-						<p class="captionImg">common house fly</p>
-						<a href="#img2" class="arr arrL"><</a>
-						<a href="#img4" class="arr arrR">></a>
-					</div>
-				</div>
+				<?php
+				$b = 1;
+					while($row = mysqli_fetch_array($r)) {
+						$c = $b - 1;
+						$d = $b + 1;
+						echo "<div class='fullSizeImage' id='img$b'>
+							<div class='content_lightbox'>
+								<a href='#!' class='close'>&times;</a>
+								<img src='".$row['img_path']."' class='imgP' />
+								<p class='captionImg'>".$row['caption']."</p>
+								<a href='#img$c' class='arr arrL'><</a>
+								<a href='#img$d' class='arr arrR'>></a>
+							</div>
+						</div>";
+						$b++;
+					}
+				?>
 			</div>
 
-			<h1 class="title-about title-cd" style="margin-left: 20px">ABSTRACT</h1>
+			<h1 class="title-about title-cd" style="margin-left: 20px"><?php echo strtoupper($category); ?></h1>
 			<section class="photos-container">
-				<a href="#img1">
-					<img
-						src="https://farm5.staticflickr.com/4858/44897303965_b0b6999735_n.jpg"
-						height="200px"
-						width="300px"
-						class="photoP"
-					/> </a
-				><a href="#img2">
-					<img
-						src="https://c1.staticflickr.com/3/2903/33934241476_d390741dc4_n.jpg"
-						height="200px"
-						width="300px"
-						class="photoP"
-					/> </a
-				><a href="#img3">
-					<img
-						src="https://c1.staticflickr.com/1/290/32457138746_9e8ed2e957_n.jpg"
-						height="200px"
-						width="300px"
-						class="photoP"
-					/>
-				</a>
+					<?php
+						$q2 = 'SELECT url_small FROM images WHERE categ_id = '.$categ_id. ' ORDER BY sort';
+						$r2 = mysqli_query($conn, $q2);
+						$a = 1;
+						while($ro = mysqli_fetch_array($r2)) {
+							echo "<a href='#img$a'>";
+							echo "<img src='".$ro['url_small']."' height='200px' width='300px' class='photoP' /> </a>";
+							$a++;
+						}
+					?>
 			</section>
 		</main>
 		<script src="js/nav.js"></script>

@@ -36,19 +36,19 @@
 			<section class="photos-content" style="margin-top: 100px">
 				<h1 class="title-about title-photos">PHOTOGRAPHY</h1>
 				<div class="photos-categ-grid">
-					<a href="#" class="photo-categ-link">
+					<a href="photos.php?categ_id=3" class="photo-categ-link">
 						<article class="photo-categ-box">
 							<img src="images/mac.jpg" alt="macro" class="categ-img" />
 							<h2 class="cat-name">MACRO</h2>
 						</article>
 					</a>
-					<a href="#" class="photo-categ-link">
+					<a href="photos.php?categ_id=2" class="photo-categ-link">
 						<article class="photo-categ-box">
 							<img src="images/nat.jpg" alt="macro" class="categ-img" />
 							<h2 class="cat-name">NATURE</h2>
 						</article>
 					</a>
-					<a href="#" class="photo-categ-link">
+					<a href="photos.php?categ_id=1" class="photo-categ-link">
 						<article class="photo-categ-box">
 							<img src="images/abs.jpg" alt="macro" class="categ-img" />
 							<h2 class="cat-name">ABSTRACT</h2>
