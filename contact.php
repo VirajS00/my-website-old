@@ -1,3 +1,6 @@
+<?php
+	include('webadmin/getData.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>

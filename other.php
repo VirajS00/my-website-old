@@ -1,4 +1,5 @@
 <?php
+	include('webadmin/getData.php');
 	include('php/connect.php');
 ?>
 <!DOCTYPE html>

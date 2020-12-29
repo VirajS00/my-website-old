@@ -474,12 +474,13 @@ article.other-card > h2 {
 	font-family: var(--font-pmry);
 	font-weight: 400;
 	color: var(--title-card-color);
-	padding: 5px 20px;
+	padding: 10px 20px;
 }
 
 article.other-card > p {
 	font-family: var(--font-pmry);
-	padding: 10px 20px;
+	padding: 0px 20px;
+	padding-bottom: 7px;
 	color: var(--card-p-color);
 }
 
@@ -1104,7 +1105,7 @@ section.films-grid {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 3px;
+	left: 4px;
 	border-radius: 50%;
 	transition: left 350ms ease-in-out;
 	z-index: 2;

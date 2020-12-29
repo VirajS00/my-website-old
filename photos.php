@@ -1,4 +1,5 @@
 <?php
+	include('webadmin/getData.php');
 	include('php/connect.php');
 	$categ_id = $_GET['categ_id'];
 	$q1 = 'SELECT category FROM images WHERE categ_id = '.$categ_id. ' LIMIT 1';

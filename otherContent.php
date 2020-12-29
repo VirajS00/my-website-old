@@ -1,4 +1,5 @@
 <?php
+	include('webadmin/getData.php');
 	include('php/connect.php');
 	$id = $_GET['id'];
 	$q = 'SELECT title, short_desc, description, video_img, platform, img_large FROM other WHERE id = '.$id;

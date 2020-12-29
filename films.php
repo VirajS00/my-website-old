@@ -1,5 +1,5 @@
 <?php
-    // include('webadmin/getData.php');
+    include('webadmin/getData.php');
     function addATag ($string) {
         $regex = '/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/im';
         return preg_replace($regex, '<a href="$1" target="_blank" class="linkFilm">$1</a>', $string);
