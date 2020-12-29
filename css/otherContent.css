@@ -8,6 +8,8 @@
 	--text-clr: #000;
 	--title-clr: #4a5997;
 	--arrow-clr: #fff;
+	--seclct-clr: inherit;
+	--select-bg-clr: #b4d5fe;
 }
 
 .darkmode {
@@ -16,6 +18,23 @@
 	--bg: #191e2a;
 	--text-clr: #fff;
 	--title-clr: #7180c1;
+	--seclct-clr: #2d210a;
+	--select-bg-clr: #ffe9c0;
+}
+
+::-moz-selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
+}
+
+::-webkit-selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
+}
+
+::selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
 }
 
 * {

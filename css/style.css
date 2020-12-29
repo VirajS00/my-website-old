@@ -30,6 +30,8 @@
 	--input-placeholder-color: #879cf5;
 	--input-hover-clr: #2b3663;
 	--cont-shadow-clr: rgba(119, 119, 119, 0.45);
+	--seclct-clr: inherit;
+	--select-bg-clr: #b4d5fe;
 }
 
 .darkmode {
@@ -57,6 +59,23 @@
 	--input-placeholder-color: #a4b5ff;
 	--input-hover-clr: #1b2233;
 	--cont-shadow-clr: rgba(54, 99, 151, 0.25);
+	--seclct-clr: #2d210a;
+	--select-bg-clr: #ffe9c0;
+}
+
+::-moz-selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
+}
+
+::-webkit-selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
+}
+
+::selection {
+	color: var(--seclct-clr);
+	background-color: var(--select-bg-clr);
 }
 
 * {
