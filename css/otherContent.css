@@ -71,6 +71,7 @@ section.title-section {
 
 section.title-section > h1.title {
 	font-size: 3rem;
+	line-height: initial;
 }
 
 .video-container {
@@ -90,6 +91,10 @@ section.title-section > h1.title {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.video-container > img {
+	object-fit: contain;
 }
 
 section.content-top {
@@ -180,6 +185,12 @@ a.platformlink .platformimg:hover {
 
 	section.main-content {
 		margin: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	section.title-section > h1.title {
+		text-align: center;
 	}
 }
 

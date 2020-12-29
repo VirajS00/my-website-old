@@ -11,6 +11,43 @@
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
+			.errors {
+				position: absolute;
+				top: 0;
+				height: auto;
+				padding: 10px 0;
+				background-color: #ff6652;
+				width: 100%;
+				border-top-right-radius: 3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				z-index: 1;
+			}
+
+			.errors:empty {
+				display: none;
+			}
+
+			.success {
+				position: absolute;
+				top: 0;
+				height: auto;
+				padding: 10px 0;
+				background-color: #3abd4e;
+				width: 100%;
+				border-top-right-radius: 3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				z-index: 1;
+			}
+
+			.success:empty {
+				display: none;
+			}
 			@media screen and (min-width: 768px) {
 				main {
 					display: flex;
@@ -123,10 +160,12 @@
 					</div>
 				</div>
 				<div class="itemRight">
+					<div class="errors"></div>
+					<div class="success"></div>
 					<h1 style="font-weight: 400; font-size: 2.2em; margin-bottom: 1.5rem">
 						SEND A MESSAGE
 					</h1>
-					<form id="myForm">
+					<form id="myForm" method='post'>
 						<input type="text" placeholder="NAME" id="name" class="textInput" />
 						<input
 							type="email"
@@ -153,5 +192,6 @@
 		</main>
 		<script src="js/nav.js"></script>
 		<script src="js/darkmode.js"></script>
+		<script src="js/submitContact.js"></script>
 	</body>
 </html>

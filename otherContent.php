@@ -60,7 +60,7 @@
 				<h1 class="title"><?php echo strtoupper($data->title); ?></h1>
 			</section>
 			<section class="content-top">
-				<article class="top-text">
+				<article class="top-text" style="padding: 0 20px;">
 					<p class="content">
 						<?php echo $data->short_desc ?>
 					</p>
