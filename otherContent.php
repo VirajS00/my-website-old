@@ -1,9 +1,16 @@
+<?php
+	include('php/connect.php');
+	$id = $_GET['id'];
+	$q = 'SELECT title, short_desc, description, video_img, platform, img_large FROM other WHERE id = '.$id;
+	$r = mysqli_query($conn, $q);
+	$data = mysqli_fetch_object($r);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CSS Logos</title>
+		<title><?php echo $data->title; ?></title>
 		<link rel="stylesheet" href="css/otherContent.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
@@ -26,11 +33,11 @@
 							#000000 0%,
 							rgba(0, 0, 0, 0) 100%
 						),
-						url(ref/download.png);
+						url(<?php echo $data->img_large ?>);
 				"
 			>
 				<div class="backarrow-container">
-					<a href="#" class="back" style="cursor: pointer">
+					<a href="other.php" class="back" style="cursor: pointer">
 						<svg
 							width="32"
 							height="21"
@@ -49,103 +56,33 @@
 						</svg>
 					</a>
 				</div>
-				<h1 class="title">CSS LOGOS</h1>
+				<h1 class="title"><?php echo strtoupper($data->title); ?></h1>
 			</section>
 			<section class="content-top">
 				<article class="top-text">
 					<p class="content">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem dicta,
-						facere enim odio optio aspernatur, voluptatem quaerat accusantium
-						deserunt, rerum ex iure delectus amet in saepe iste illo architecto
-						distinctio.
-						<br /><br />
-						You can find a link to the project
-						<a href="#" class="othera">here</a>
+						<?php echo $data->short_desc ?>
 					</p>
 				</article>
 				<article class="top-videoimg">
 					<div class="video-container">
-						<iframe
-							width="560"
-							height="315"
-							src="https://www.youtube.com/embed/x9haKLBGqYA"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
+						<?php echo $data->video_img ?>
 					</div>
 				</article>
 			</section>
 			<section class="main-content">
-				<p>
-					<span
-						>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						Voluptates deserunt numquam autem eaque porro! Sequi maiores natus
-						et necessitatibus neque tempore, quae fugit ipsa, explicabo,
-						voluptate quis. Fugiat, alias? At.</span
-					><br /><br />
-					<span
-						>Optio magnam facere aliquam atque quod, repellat sed temporibus
-						dolores, deserunt cum iste ipsa, minima sint voluptate in eos.
-						Veritatis doloremque laudantium fugit harum neque pariatur repellat
-						ipsa accusamus. Consequuntur.</span
-					><br /><br />
-					<span
-						>Neque voluptatem veniam temporibus eius! Nam eligendi eum dolorem
-						facere voluptates quam excepturi magnam, dolorum quisquam! Quia
-						commodi, beatae, fuga iure alias ipsa deserunt sint odit vel, omnis
-						accusamus veniam!</span
-					>
-				</p>
-				<img src="images/nat.jpg" alt="" class="OtherImg" />
-				<pre
-					class="language-javascript prettyprint"
-				><code class="language-javascript">// Grab the form and add an event listener to it to listen for its submission
-document.querySelector('form').addEventListener('submit', e => {
-    // Grab the textarea
-    const inputtext = document.querySelector('.inputText');
-
-    // Prevent the form from getting submitted 
-    e.preventDefault();
-
-    // add the HTML to the textarea
-    inputtext.value = '';
-    inputtext.value = doc.body.innerHTML;
-
-    // submit the form
-    document.getElementById('other-form').submit();
-});
-</code></pre>
+				<?php echo $data->description; ?>
 				<div class="platform">
 					<h1 class="title">PLATFORM USED</h1>
 					<div class="platFormImgC">
-						<img
-							src="ref/bJavaScript-logo.png"
-							class="platformimg"
-							title="MySQL"
-							alt="MySQL"
-							height="100px"
-						/><img
-							src="ref/bmysql-5-logo-png-transparent.png"
-							class="platformimg"
-							title="JavaScript"
-							alt="JavaScript"
-							height="100px"
-						/><img
-							src="ref/phplogo.png"
-							class="platformimg"
-							title="PHP"
-							alt="PHP"
-							height="100px"
-						/>
-						<a href="https://nodejs.org/" target="_blank" class="platformlink"
-							><img
-								src="ref/nodejs.png"
-								class="platformimg"
-								title="Node JS"
-								alt="Node JS"
-								height="100px"
-						/></a>
+						<?php
+							$platforms = $data->platform;
+							$q1 = 'SELECT img_code FROM platforms WHERE id IN ('.$platforms.')';
+							$r1 = mysqli_query($conn, $q1);
+							while($row = mysqli_fetch_array($r1)) {
+								echo $row['img_code'];
+							}
+						?>
 					</div>
 				</div>
 			</section>

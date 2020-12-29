@@ -23,7 +23,7 @@
 		<nav>
 			<img src="images/logo.svg" alt="logo" class="nav-img" />
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="index.php" class="nav-link active">Home</a></li>
+				<li class="nav-li"><a href="index.php" class="nav-link">Home</a></li>
 				<li class="nav-li"><a href="about.php" class="nav-link">About</a></li>
 				<li class="nav-li"><a href="photoCateg.php" class="nav-link">Photos</a></li>
 				<li class="nav-li">
@@ -32,7 +32,7 @@
 				<li class="nav-li">
 					<a href="other.php" class="nav-link">Coding and Design</a>
 				</li>
-				<li class="nav-li"><a href="contact.php" class="nav-link">Contact</a></li>
+				<li class="nav-li"><a href="contact.php" class="nav-link active">Contact</a></li>
 			</ul>
 		</nav>
 		<main>

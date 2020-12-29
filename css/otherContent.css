@@ -45,6 +45,9 @@
 
 body {
 	background-color: var(--bg);
+	font-family: var(--font-pmry);
+	color: var(--text-clr);
+	line-height: 25px;
 }
 
 main {
@@ -72,7 +75,7 @@ section.title-section > h1.title {
 
 section.content-top > article.top-text > p {
 	font-family: var(--font-pmry);
-	margin: 2rem 0;
+	margin: 2rem 1.5rem;
 	color: var(--text-clr);
 }
 
@@ -85,7 +88,9 @@ section.content-top > article.top-text > p {
 	overflow: hidden;
 }
 
-.video-container > iframe {
+.video-container > iframe,
+.video-container > img,
+.video-container > video {
 	position: absolute;
 	top: 0;
 	left: 0;

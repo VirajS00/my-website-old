@@ -1,3 +1,10 @@
+<?php
+    // include('webadmin/getData.php');
+    function addATag ($string) {
+        $regex = '/(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/im';
+        return preg_replace($regex, '<a href="$1" target="_blank" class="linkFilm">$1</a>', $string);
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,43 +22,37 @@
 	</head>
 	<body>
 		<div class="embedLinks" id="embedLinks">
-			<div id="film1" class="filmE">
-				<div class="left-side">
-					<div class="video-container">
-						<iframe
-							width="800"
-							height="491"
-							src="https://www.youtube.com/embed/g9YMX0Fukf4"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-				</div>
-				<div class="right-side">
-					<a href="#!" class="close1">&times;</a>
-					<h1 class="title">VIDEO TITLE</h1>
-					<p class="desc">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-						voluptates quo libero deserunt commodi blanditiis quaerat rem unde
-						sint magni adipisci, reprehenderit atque numquam exercitationem
-						facilis, impedit, labore molestias suscipit!
-						<br /><br />
-						<a href="http://virajshukla.com" target="_blank"
-							>http://virajshukla.com</a
-						>
-					</p>
-				</div>
-			</div>
+			<?php
+				$key = YOUR_API_KEY_HERE;
+				$url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=PLNUNNqPwkQe-67Wlv8WkoK7fZO96I07wf&access_token=AIzaSyBY5Fyycf5sZ9CWDFMZjrDSw32MW0i9SGc&key=$key";
+                $client = curl_init($url);
+				curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+				$response = curl_exec($client);
+                $jsonArr = json_decode($response, true);
+				$items = $jsonArr['items'];
+				for ($i=0; $i < sizeof($items); $i++) {
+					$videoId = $items[$i]['snippet']['resourceId']['videoId'];
+					$a = $i + 1;
+					echo "<div id='film$a' class='filmE'>";
+					echo "<div class='left-side'><div class='video-container'>";
+					echo "<iframe width='800' height='491' src='https://www.youtube.com/embed/$videoId' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+					echo "</div></div>";
+					echo "<div class='right-side'><a href='#!' class='close1'>&times;</a>";
+					echo "<h1 class='title'>".strtoupper($items[$i]['snippet']['title'])."</h1>";
+					echo "<p class='desc'>".nl2br(addATag($items[$i]['snippet']['description']))."</p>";
+					echo "</div>";
+					echo "</div>";
+				}
+			?>
 		</div>
 		<nav>
 			<img src="images/logo.svg" alt="logo" class="nav-img" />
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="index.php" class="nav-link active">Home</a></li>
+				<li class="nav-li"><a href="index.php" class="nav-link">Home</a></li>
 				<li class="nav-li"><a href="about.php" class="nav-link">About</a></li>
 				<li class="nav-li"><a href="photoCateg.php" class="nav-link">Photos</a></li>
 				<li class="nav-li">
-					<a href="films.php" class="nav-link">Filmmaking</a>
+					<a href="films.php" class="nav-link active">Filmmaking</a>
 				</li>
 				<li class="nav-li">
 					<a href="other.php" class="nav-link">Coding and Design</a>
@@ -70,66 +71,19 @@
 			</label>
 			<h1 class="title-about title-cd">FILMMAKING</h1>
 			<section class="films-grid">
-				<div class="filmThumb">
-					<a href="#film1" class="filmL">
-						<img
-							height="0"
-							width="0"
-							src="https://i.ytimg.com/vi/xIMf_QEciKI/mqdefault.jpg"
-							alt="Njaan Karshakan"
-							class="filmThumbImg"
-						/>
-						<div class="filmTitle">Demo Reel 2020</div>
-					</a>
-				</div>
-				<div class="filmThumb">
-					<a href="#film2" class="filmL">
-						<img
-							height="0"
-							width="0"
-							src="https://i.ytimg.com/vi/g9YMX0Fukf4/mqdefault.jpg"
-							alt="Njaan Karshakan"
-							class="filmThumbImg"
-						/>
-						<div class="filmTitle">Dal Bati Choorma</div>
-					</a>
-				</div>
-				<div class="filmThumb">
-					<a href="#film3" class="filmL">
-						<img
-							height="0"
-							width="0"
-							src="https://i.ytimg.com/vi/r4bgDYGkbpE/mqdefault.jpg"
-							alt="Njaan Karshakan"
-							class="filmThumbImg"
-						/>
-						<div class="filmTitle">Njaan Karshakan</div>
-					</a>
-				</div>
-				<div class="filmThumb">
-					<a href="#film4" class="filmL">
-						<img
-							height="0"
-							width="0"
-							src="https://i.ytimg.com/vi/-HCDzIOI85w/mqdefault.jpg"
-							alt="Njaan Karshakan"
-							class="filmThumbImg"
-						/>
-						<div class="filmTitle">A Day in My Room</div>
-					</a>
-				</div>
-				<div class="filmThumb">
-					<a href="#film5" class="filmL">
-						<img
-							height="0"
-							width="0"
-							src="https://i.ytimg.com/vi/JiF9ZDi1cks/mqdefault.jpg"
-							alt="Njaan Karshakan"
-							class="filmThumbImg"
-						/>
-						<div class="filmTitle">The eternal Calendar</div>
-					</a>
-				</div>
+				<?php
+					for ($i=0; $i < sizeof($items); $i++){
+						$thumbnail = $items[$i]['snippet']['thumbnails']['medium']['url'];
+                        $title = $items[$i]['snippet']['title'];
+						$b = $i + 1;
+						echo "<div class='filmThumb'>";
+						echo "<a href='#film$b' class='filmL'>";
+						echo "<img height='0' width='0' src='$thumbnail' alt='Njaan Karshakan' class='filmThumbImg' />";
+						echo "<div class='filmTitle'>$title</div>";
+						echo "</a>";
+						echo "</div>";
+					}
+				?>
 			</section>
 		</main>
 		<script src="js/nav.js"></script>
