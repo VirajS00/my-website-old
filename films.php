@@ -23,7 +23,7 @@
 	<body>
 		<div class="embedLinks" id="embedLinks">
 			<?php
-				$key = YOUR_KEY_HERE;
+				$key = YOUR_API_KEY_HERE;
 				$url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=PLNUNNqPwkQe-67Wlv8WkoK7fZO96I07wf&access_token=AIzaSyBY5Fyycf5sZ9CWDFMZjrDSw32MW0i9SGc&key=$key";
                 $client = curl_init($url);
 				curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -49,7 +49,6 @@
 			<img src="images/logo.svg" alt="logo" class="nav-img" />
 			<ul class="nav-ul">
 				<li class="nav-li"><a href="index.php" class="nav-link">Home</a></li>
-				<li class="nav-li"><a href="about.php" class="nav-link">About</a></li>
 				<li class="nav-li"><a href="photoCateg.php" class="nav-link">Photos</a></li>
 				<li class="nav-li">
 					<a href="films.php" class="nav-link active">Filmmaking</a>
@@ -58,17 +57,15 @@
 					<a href="other.php" class="nav-link">Coding and Design</a>
 				</li>
 				<li class="nav-li"><a href="contact.php" class="nav-link">Contact</a></li>
+				<li class="nav-li"><a href="about.php" class="nav-link">About</a></li>
+				<li class="nav-li" style='margin-right: 70px'></li>
 			</ul>
 		</nav>
+		<label class="switch">
+			<input type="checkbox" class="darkmode-toggle" aria-label="dark mode toggle" />
+			<span class="slider"></span>
+		</label>
 		<main style="margin-top: 100px">
-			<label class="switch">
-				<input
-					type="checkbox"
-					class="darkmode-toggle"
-					aria-label="dark mode toggle"
-				/>
-				<span class="slider"></span>
-			</label>
 			<h1 class="title-about title-cd">FILMMAKING</h1>
 			<section class="films-grid">
 				<?php
