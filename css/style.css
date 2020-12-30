@@ -32,6 +32,7 @@
 	--cont-shadow-clr: rgba(119, 119, 119, 0.45);
 	--seclct-clr: inherit;
 	--select-bg-clr: #b4d5fe;
+	--arr-c: #fff;
 }
 
 .darkmode {
@@ -725,6 +726,25 @@ section.films-grid {
 
 .filmE > .right-side > a.close1:hover {
 	color: #b00000;
+}
+
+.filmE > .right-side > .arrowsGridInside {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+}
+
+.filmE > .right-side > .arrowsGridInside > a {
+	text-decoration: none;
+}
+
+.filmE > .right-side > .arrowsGridInside > a:hover {
+	--arr-c: #b00000;
+}
+
+.filmE > .right-side > .arrowsGridInside > a > svg {
+	height: 40px;
 }
 
 @media screen and (min-width: 768px) {

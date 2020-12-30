@@ -33,6 +33,8 @@
 				for ($i=0; $i < sizeof($items); $i++) {
 					$videoId = $items[$i]['snippet']['resourceId']['videoId'];
 					$a = $i + 1;
+					$b = $a - 1;
+					$c = $a + 1;
 					echo "<div id='film$a' class='filmE'>";
 					echo "<div class='left-side'><div class='video-container'>";
 					echo "<iframe width='800' height='491' src='https://www.youtube.com/embed/$videoId' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
@@ -40,6 +42,12 @@
 					echo "<div class='right-side'><a href='#!' class='close1'>&times;</a>";
 					echo "<h1 class='title'>".strtoupper($items[$i]['snippet']['title'])."</h1>";
 					echo "<p class='desc'>".nl2br(addATag($items[$i]['snippet']['description']))."</p>";
+					echo "<div class='arrowsGridInside'>";
+					echo "<a href='#film$b'><svg width='62' height='62' viewBox='0 0 62 62' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M43 6L18 31L43 56' style='stroke: var(--arr-c); transition: stroke 250ms ease;' stroke-width='4'/></svg>
+						</a><a href='#film$c'><svg width='62' height='62' viewBox='0 0 62 62' fill='none' xmlns='http://www.w3.org/2000/svg'>
+						<path d='M18 6L43 31L18 56' style='stroke: var(--arr-c); transition: stroke 250ms ease;' stroke-width='4'/>
+						</svg></a>";
+					echo "</div>";
 					echo "</div>";
 					echo "</div>";
 				}
