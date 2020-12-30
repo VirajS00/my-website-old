@@ -170,6 +170,24 @@ img.nav-img {
 	transform: translateY(-50%);
 }
 
+.contact-link {
+	text-decoration: none;
+	color: #fff;
+	background-color: #4f4f9c;
+	display: flex;
+	height: 60px;
+	width: 200px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 120px;
+	transition: background-color 250ms ease;
+	font-size: 1.1rem;
+}
+
+.contact-link:hover {
+	background-color: #36366f;
+}
+
 @media screen and (max-width: 768px) {
 	nav {
 		background-color: var(--nav-bg) !important;

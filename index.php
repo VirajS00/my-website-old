@@ -36,6 +36,8 @@
 				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center"
 					>(Hobbiest Filmmaker, Photographr and Web Developer)</span
 				>
+				<br><br>
+				<a href="contact.php" class="contact-link">Contact Me</a>
 			</section>
 		</main>
 		<script src="js/nav.js"></script>
