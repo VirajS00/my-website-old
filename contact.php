@@ -157,6 +157,13 @@
 								data-medianame="GitHub"
 								><img src="images/github.svg" alt="flickr" class="socialImg"
 							/></a>
+							<a
+								href="https://www.linkedin.com/in/viraj-shukla-012851202"
+								target="_blank"
+								class="socialL"
+								data-medianame="Linkedin"
+								><img src="images/linkedin.svg" alt="flickr" class="socialImg"
+							/></a>
 						</div>
 					</div>
 				</div>

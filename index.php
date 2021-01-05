@@ -34,7 +34,7 @@
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
 				>
 				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center"
-					>(Hobbiest Filmmaker, Photographr and Web Developer)</span
+					>(Hobbiest Filmmaker, Photographer and Web Developer)</span
 				>
 				<br><br>
 				<a href="contact.php" class="contact-link">Contact Me</a>

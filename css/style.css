@@ -845,7 +845,7 @@ section.films-grid {
 
 .connectIcons {
 	display: grid;
-	grid-template-columns: repeat(4, 30px);
+	grid-template-columns: repeat(5, 30px);
 	gap: 0.5rem;
 	justify-content: center;
 	align-items: center;
