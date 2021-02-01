@@ -13,7 +13,7 @@
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
 			main {
-				margin: 3rem 2rem;r
+				margin: 3rem 2rem;
 			}
 		</style>
 	</head>

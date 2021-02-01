@@ -477,7 +477,8 @@ section.cards-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 350px);
 	gap: 3rem;
-	max-width: 1500px;
+	max-width: 1150px;
+	margin: 0 auto;
 }
 
 article.other-card {
@@ -575,7 +576,8 @@ article.other-card > a.article-link:hover {
 	h1.title-cd {
 		text-align: left;
 		width: 90%;
-		max-width: 1000px;
+		max-width: 1150px;
+		margin: 2.2rem auto;
 	}
 }
 
@@ -594,6 +596,8 @@ section.films-grid {
 	width: 100%;
 	grid-gap: 20px;
 	padding-bottom: 70px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .filmThumbImg {
 	object-fit: cover;
