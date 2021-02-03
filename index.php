@@ -10,6 +10,30 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
+		<style>
+			::-moz-selection {
+				color: #2d210a;
+				background-color: #ffe9c0;
+			}
+
+			::-webkit-selection {
+				color: #2d210a;
+				background-color: #ffe9c0;
+			}
+
+			::selection {
+				color: #2d210a;
+				background-color: #ffe9c0;
+			}
+			.home-link {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.home-link:hover {
+				text-decoration: underline;
+			}
+		</style>
 	</head>
 	<body>
 		<nav style="background-color: transparent">
@@ -33,9 +57,9 @@
 				<span style="font-size: 2.5rem"
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
 				>
-				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center"
-					>(Hobbiest Filmmaker, Photographer and Web Developer)</span
-				>
+				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center">
+					<a href="photoCateg.php" class="home-link">Photography</a> | <a href="films.php" class="home-link">Filmmaking</a> | <a href="other.php" class="home-link">Web Development</a>
+				</span>
 				<br><br>
 				<a href="contact.php" class="contact-link">Contact Me</a>
 			</section>
