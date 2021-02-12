@@ -57,10 +57,9 @@
 				<span style="font-size: 2.5rem"
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
 				>
-				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center">
+				<span style="margin-top: 20px; font-size: 1.35rem; text-align: center; margin-bottom: 2rem;">
 					<a href="photoCateg.php" class="home-link">Photography</a> | <a href="films.php" class="home-link">Filmmaking</a> | <a href="other.php" class="home-link">Web Development</a>
 				</span>
-				<br><br>
 				<a href="contact.php" class="contact-link">Contact Me</a>
 			</section>
 		</main>
