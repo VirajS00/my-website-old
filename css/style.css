@@ -39,6 +39,7 @@
 	--sel-arrow-clr: #8f8f8f;
 	--title-card-clr: #5261a5;
 	--res-link-clr: #5261a5;
+	--link-clr-res: #c4c4c4;
 }
 
 .darkmode {
@@ -74,6 +75,7 @@
 	--sel-arrow-clr: #bbc8ff;
 	--title-card-clr: #89a0ff;
 	--res-link-clr: #dce3ff;
+	--link-clr-res: #89a0ff;
 }
 
 ::-moz-selection {
@@ -1159,6 +1161,7 @@ p.subtitle-resources {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 2rem;
 }
 
 .select-container1 {
@@ -1206,6 +1209,7 @@ section.resources-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 280px);
 	margin-top: 2rem;
+	padding: 0 2rem;
 }
 
 article.resource {
@@ -1238,6 +1242,11 @@ article.resource > p {
 
 .link-resources {
 	padding-bottom: 0.5rem;
+	font-size: 1.1rem;
+}
+
+.link-resources > svg {
+	margin-left: 0.2rem;
 }
 
 a[data-type] {
@@ -1247,6 +1256,20 @@ a[data-type] {
 
 a[data-type]:hover {
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.resources-top-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.select-container1 {
+		margin-top: 1.5rem;
+	}
+	h1.resource-title {
+		text-align: center;
+	}
 }
 /* resources end */
 
