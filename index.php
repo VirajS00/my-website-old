@@ -58,7 +58,7 @@
 			</ul>
 		</nav>
 		<main>
-			<section class="top_img">
+			<section class="top_img" id="section_top">
 				<span style="font-size: 4rem">Hi</span>
 				<span style="font-size: 2.5rem"
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
@@ -66,16 +66,22 @@
 				<a href="contact.php" class="contact-link" style="margin-top: 1.5rem"
 					>Contact Me</a
 				>
-				<a class="arr-link" href="#">
+				<a class="arr-link" href="#section_photo">
 					<img src="images/down_arr.svg" />
 				</a>
 			</section>
-			<section class="home_page photo_section">
+			<section class="home_page photo_section" id="section_photo">
 				<div class="home_section_overlay"></div>
 				<h1 class="section-title">Photography</h1>
 				<a href="photoCateg.php" class="explore-button">Explore</a>
 			</section>
 		</main>
 		<script src="js/nav.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+		<script>
+			const scroll = new SmoothScroll('a[href*="#"]', {
+				speed: 1000
+			});
+		</script>
 	</body>
 </html>

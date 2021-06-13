@@ -122,10 +122,11 @@ section.top_img {
 }
 
 .arr-link {
-	position: absolute;
+	position: fixed;
 	display: block;
 	bottom: 2.5rem;
 	animation: bounce 1s infinite alternate linear;
+	z-index: 1000;
 }
 .arr-link img {
 	height: 40px;
