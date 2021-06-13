@@ -71,6 +71,7 @@
 				</a>
 			</section>
 			<section class="home_page photo_section">
+				<div class="home_section_overlay"></div>
 				<h1 class="section-title">Photography</h1>
 				<a href="photoCateg.php" class="explore-button">Explore</a>
 			</section>
