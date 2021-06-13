@@ -105,7 +105,7 @@ body {
 }
 
 section.top_img {
-	background: linear-gradient(180deg, #010036 0%, rgba(0, 0, 0, 0) 100%),
+	background: linear-gradient(180deg, #010036 0%, #0100361e 100%),
 		url(../images/bhome_coverC.jpg) no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -119,6 +119,48 @@ section.top_img {
 	flex-direction: column;
 	color: var(--clr-light);
 	font-family: 'Raleway', sans-serif;
+}
+
+.arr-link {
+	position: absolute;
+	display: block;
+	bottom: 2.5rem;
+	animation: bounce 1s infinite alternate linear;
+}
+.arr-link img {
+	height: 40px;
+}
+
+section.photo_section {
+	position: relative;
+	top: 100vh;
+	font-family: var(--font-pmry);
+}
+
+section.home_page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	color: #fff;
+}
+
+h1.section-title {
+	font-size: 5rem;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -240,6 +282,11 @@ img.nav-img {
 		width: 100%;
 		height: 100%;
 		height: 50px;
+	}
+	.arr-link {
+		position: absolute;
+		display: block;
+		bottom: 5rem;
 	}
 }
 
