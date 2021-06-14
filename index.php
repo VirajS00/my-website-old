@@ -33,6 +33,10 @@
 			.home-link:hover {
 				text-decoration: underline;
 			}
+
+			a.arr-link > img {
+				transition: transform 250ms ease;
+			}
 		</style>
 	</head>
 	<body>
@@ -63,9 +67,7 @@
 				<span style="font-size: 2.5rem"
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
 				>
-				<a href="contact.php" class="contact-link" style="margin-top: 1.5rem"
-					>Contact Me</a
-				>
+				<a href="contact.php" class="explore-button">Contact Me</a>
 				<a class="arr-link" href="#section_photo">
 					<img src="images/down_arr.svg" />
 				</a>
@@ -75,13 +77,36 @@
 				<h1 class="section-title">Photography</h1>
 				<a href="photoCateg.php" class="explore-button">Explore</a>
 			</section>
+			<section
+				class="home_page video_section"
+				id="section_films"
+				style="top: 200vh"
+			>
+				<div class="home_section_overlay"></div>
+				<div class="video-background">
+					<iframe
+						src="https://www.youtube.com/embed/xIMf_QEciKI?playlist=xIMf_QEciKI&controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1"
+						frameborder="0"
+						allowfullscreen
+					></iframe>
+				</div>
+
+				<h1 class="section-title">Filmmaking</h1>
+				<a href="films.php" class="explore-button">Explore</a>
+			</section>
+			<section
+				class="home_page cd_section"
+				id="section_cd"
+				style="top: 300vh; background-image: url(images/codeImg.jpeg)"
+			>
+				<div class="home_section_overlay"></div>
+
+				<h1 class="section-title">Coding and Design</h1>
+				<a href="films.php" class="explore-button">Explore</a>
+			</section>
 		</main>
 		<script src="js/nav.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-		<script>
-			const scroll = new SmoothScroll('a[href*="#"]', {
-				speed: 1000
-			});
-		</script>
+		<script src="js/homepage.js"></script>
 	</body>
 </html>
