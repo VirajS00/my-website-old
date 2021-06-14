@@ -1,5 +1,6 @@
 const scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 1000
+	speed: 1000,
+	speedAsDuration: true
 });
 
 const sectionPhoto = document.querySelector('#section_photo');

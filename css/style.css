@@ -140,6 +140,7 @@ section.photo_section {
 			rgba(0, 0, 0, 0.31) 100%
 		),
 		url(../images/slideshow/1.jpeg);
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	animation: home_slideshow 10s ease infinite;
@@ -372,9 +373,17 @@ img.nav-img {
 		height: 50px;
 	}
 	.arr-link {
-		position: absolute;
 		display: block;
 		bottom: 5rem;
+	}
+
+	h1.section-title {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	a.explore-button {
+		padding: 0.5rem 3rem;
 	}
 }
 

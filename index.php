@@ -97,12 +97,16 @@
 			<section
 				class="home_page cd_section"
 				id="section_cd"
-				style="top: 300vh; background-image: url(images/codeImg.jpeg)"
+				style="
+					top: 300vh;
+					background-image: url(images/codeImg.jpeg);
+					background-position: center;
+				"
 			>
 				<div class="home_section_overlay"></div>
 
 				<h1 class="section-title">Coding and Design</h1>
-				<a href="films.php" class="explore-button">Explore</a>
+				<a href="other.php" class="explore-button">Explore</a>
 			</section>
 		</main>
 		<script src="js/nav.js"></script>
