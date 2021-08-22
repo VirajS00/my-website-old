@@ -56,10 +56,19 @@ main {
 	align-items: center;
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90vw;
+	max-width: 800px;
+	padding-top: 2rem;
+}
+
 section.title-section {
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 40vh;
 	width: 100%;
 	color: #fff;
 	font-family: var(--font-pmry);
@@ -69,7 +78,7 @@ section.title-section {
 	background-position: center;
 }
 
-section.title-section > h1.title {
+section.title-section > h1.title-top {
 	font-size: 3rem;
 	line-height: initial;
 }
@@ -112,7 +121,10 @@ section.content-top {
 
 section.main-content {
 	width: 90%;
-	margin: 3rem 0;
+}
+
+.top-text {
+	padding-top: 1rem;
 }
 
 section.main-content > p {
@@ -136,9 +148,10 @@ img.OtherImg {
 	font-family: var(--font-pmry);
 }
 
-.platform > h1.title {
-	margin: 20px 0;
+h1.title {
+	margin: 1em 0;
 	color: var(--title-clr);
+	text-align: center;
 }
 
 .platFormImgC {
@@ -176,20 +189,8 @@ a.platformlink .platformimg:hover {
 	cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-	.content-top {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		padding: 50px 0;
-	}
-
-	section.main-content {
-		margin: 0;
-	}
-}
-
 @media screen and (max-width: 768px) {
-	section.title-section > h1.title {
+	section.title-section > h1.title-top {
 		text-align: center;
 	}
 }
