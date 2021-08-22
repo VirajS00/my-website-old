@@ -12,7 +12,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><?php echo $data->title; ?></title>
-		<link rel="stylesheet" href="css/otherContent.min.css?V=1" />
+		<link rel="stylesheet" href="css/otherContent.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -149,7 +149,9 @@
 			if(!!document.querySelector('pre')) {
 				const styles = window.getComputedStyle(document.querySelector('pre'));
 				let margin = (parseInt(styles.getPropertyValue('--extra-width-pre')) / 2) * -1;
-				document.querySelector('pre').style.marginLeft = `${margin}px`;
+				document.querySelectorAll('pre').forEach(pre => {
+					pre.style.marginLeft = `${margin}px`;
+				});
 			}
 		</script>
 	</body>
