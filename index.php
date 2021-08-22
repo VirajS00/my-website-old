@@ -100,7 +100,7 @@
 				style="
 					top: 300vh;
 					background-image: url(images/codeImg.jpeg);
-					background-position: center;
+					background-position: center; background-size: cover;
 				"
 			>
 				<div class="home_section_overlay"></div>
