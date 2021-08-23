@@ -1353,7 +1353,7 @@ select.resources-select {
 	outline: auto 5px -webkit-focus-ring-color;
 }
 
-section.resources-grid {
+.resources-grid {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
