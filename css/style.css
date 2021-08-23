@@ -41,6 +41,7 @@
 	--res-link-clr: #5261a5;
 	--link-clr-res: #c4c4c4;
 	--text-color-subtle: #ccc;
+	--resource-title-clr: #3b4677;
 }
 
 .darkmode {
@@ -78,6 +79,7 @@
 	--res-link-clr: #dce3ff;
 	--link-clr-res: #89a0ff;
 	--text-color-subtle: #6674ab;
+	--resource-title-clr: #e8ecff;
 }
 
 ::-moz-selection {
@@ -1354,7 +1356,7 @@ select.resources-select {
 section.resources-grid {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 350px);
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	margin-top: 2rem;
 	padding: 0 2rem;
 	gap: 1rem;
@@ -1373,7 +1375,7 @@ article.resource {
 article.resource > h1 {
 	font-size: 1.7rem;
 	margin-bottom: 1.5rem;
-	color: var(--title-card-clr);
+	color: var(--resource-title-clr);
 	text-align: center;
 }
 
