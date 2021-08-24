@@ -10,14 +10,12 @@
 	--title-card-color: #3b4677;
 	--camera-svg-pmry: #4a5997;
 	--camera-svg-light: #fff;
-	--logo-text-color: #000;
 	--text-color-default: #000;
 	--bg: #fff;
 	--box-shadow-color: rgba(0, 0, 0, 0.25);
 	--hover-color-grey: #eee;
 	--photo-categ-text-color: #4a5997;
 	--card-p-color: #717171;
-	--logo-color: #444e78;
 	--tags-bg: #d3d3d3;
 	--tags-text-color: #5f6da7;
 	--article-link-bg: #6470a1;
@@ -42,13 +40,14 @@
 	--link-clr-res: #c4c4c4;
 	--text-color-subtle: #ccc;
 	--resource-title-clr: #3b4677;
+	--hobby-bg-clr: #e5e5e5;
+	--hobby-text-clr: #4a5997;
 }
 
 .darkmode {
 	--title-color: #7180c1;
 	--camera-svg-pmry: #eee;
 	--camera-svg-light: #444d72;
-	--logo-text-color: #eee;
 	--text-color-default: #eee;
 	--bg: #1a1e2b;
 	--box-shadow-color: rgba(64, 90, 158, 0.25);
@@ -56,7 +55,6 @@
 	--photo-categ-text-color: #eee;
 	--title-card-color: #7a90f0;
 	--card-p-color: #eeeeee;
-	--logo-color: #8698e4;
 	--tags-bg: #2e3550;
 	--tags-text-color: #7180c1;
 	--article-link-bg: #7886c2;
@@ -80,6 +78,8 @@
 	--link-clr-res: #89a0ff;
 	--text-color-subtle: #6674ab;
 	--resource-title-clr: #e8ecff;
+	--hobby-bg-clr: #444d72;
+	--hobby-text-clr: #fff;
 }
 
 ::-moz-selection {
@@ -420,35 +420,6 @@ p.about-p {
 	max-width: 800px;
 }
 
-.hobbies-container {
-	display: grid;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-}
-
-.hobbies-container > .hobby {
-	height: 200px;
-	width: 200px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--camera-svg-light);
-	position: relative;
-}
-
-.xp {
-	background-image: linear-gradient(90deg, #00cf53 -1.6%, #d7ffe7 100%);
-	height: 10px;
-	width: 300px;
-	border-radius: 20px;
-	margin: 20px 0;
-}
-
 .container-2 {
 	display: grid;
 	font-size: 0.5em;
@@ -466,58 +437,34 @@ p.about-p {
 	bottom: 12px;
 }
 
+.hobbies {
+	font-family: var(--font-pmry);
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 450px;
+	width: 90vw;
+	margin: 1em auto;
+	flex-wrap: wrap;
+	flex-grow: 1;
+}
+
+.hobbies .hobby {
+	background-color: var(--hobby-bg-clr);
+	color: var(--hobby-text-clr);
+	display: flex;
+	justify-content: center;
+	padding: 0.5em 1em;
+	border-radius: 0.3em;
+	margin-bottom: 1em;
+}
+
+.hobbies .hobby:not(:last-of-type) {
+	margin-right: 1em;
+}
+
 @media screen and (min-width: 768px) {
-	.hobbies-non-coding {
-		grid-template-columns: 200px 200px;
-		gap: 30px;
-	}
-
-	.hobbies-container1 {
-		grid-template-areas:
-			'html css js'
-			'php mysql .'
-			'node exp .';
-	}
-
-	.hobby.html {
-		grid-area: html;
-	}
-
-	.hobby.ept {
-		grid-area: ept;
-		box-shadow: none;
-		width: 100px;
-	}
-
-	.hobby.css {
-		grid-area: css;
-	}
-
-	.hobby.js {
-		grid-area: js;
-	}
-
-	.hobby.php {
-		grid-area: php;
-	}
-
-	.hobby.mysql {
-		grid-area: mysql;
-	}
-
-	.hobby.node {
-		grid-area: node;
-	}
-
-	.hobby.exp {
-		grid-area: exp;
-	}
-
-	.hobby.eptl {
-		grid-area: eptl;
-		box-shadow: none;
-		width: 100px;
-	}
 	.text-small:not(.tm1) {
 		margin-left: 35px;
 	}
