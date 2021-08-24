@@ -7,9 +7,17 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>About</title>
-		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/style.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
+		<style>
+			main {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		</style>
 	</head>
 	<body>
 		<nav>

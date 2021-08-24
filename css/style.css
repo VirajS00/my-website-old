@@ -484,16 +484,8 @@ p.about-p {
 		left: -180px;
 		width: 200px;
 	}
-	.tm1 {
-		position: absolute;
-		left: -60px;
-		top: 10px;
-		width: 250px;
-	}
-	.xp {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+	.hobbies {
+		margin-bottom: 5rem;
 	}
 }
 /* about page end */
