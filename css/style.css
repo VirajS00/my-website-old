@@ -1307,7 +1307,12 @@ article.resource {
 	background: var(--camera-svg-light);
 	box-shadow: 0 4px 10px var(--box-shadow-color);
 	border-radius: 2rem;
-	padding: 2rem;
+	padding: 2em 2.5em;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	font-family: var(--font-pmry);
 }
 
