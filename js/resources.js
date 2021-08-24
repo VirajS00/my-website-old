@@ -38,8 +38,6 @@ const getResources = async (category) => {
 	const req = await fetch(url);
 	const res = await req.json();
 
-	console.log(res);
-
 	if (res[0].status === 'Success') {
 		res[1].resources.forEach((json) => {
 			const { links, resource_name, resource_type, short_desc } = json;
