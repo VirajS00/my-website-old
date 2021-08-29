@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Oops...</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			:root {
+				--font-pmry: 'Raleway', sans-serif;
+				--text-clr: #000;
+				--bg-clr: #fff;
+				--button-bg: #253160;
+				--clr-404: #253160;
+				--btn-hover-bg: #151c3a;
+			}
+			.darkmode {
+				--text-clr: #fff;
+				--bg-clr: #1a1e2b;
+				--button-bg: #253160;
+				--clr-404: #90a6ff;
+				--btn-hover-bg: #384787;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+			}
+
+			body {
+				font-family: var(--font-pmry);
+				padding: 0;
+				background-color: var(--bg-clr);
+			}
+
+			main {
+				--margin-b: 2rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+			h1 {
+				font-size: 10rem;
+				font-size: clamp(10rem, 25vw, 15rem);
+				font-weight: 300;
+				color: var(--clr-404);
+				margin-bottom: var(--margin-b);
+			}
+
+			p {
+				font-size: 2rem;
+				text-align: center;
+				margin-bottom: var(--margin-b);
+				color: var(--text-clr);
+			}
+
+			.button {
+				font-size: 1.5rem;
+				text-decoration: none;
+				color: #fff;
+				background-color: var(--button-bg);
+				display: flex;
+				padding: 1.5rem 3rem;
+				border-radius: 100vh;
+				transition: background-color 250ms ease;
+			}
+
+			.button:hover {
+				background-color: var(--btn-hover-bg);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>404</h1>
+			<p>Oops...looks like this page does not exisit</p>
+			<a href="index" class="button">Go back Home</a>
+		</main>
+		<script src="js/darkmode.js"></script>
+	</body>
+</html>
