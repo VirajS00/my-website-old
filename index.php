@@ -7,7 +7,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Viraj's Site</title>
-		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/style.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -67,6 +67,11 @@
 				<span style="font-size: 2.5rem"
 					>I’m <span style="color: #b2c1ff">Viraj Shukla</span></span
 				>
+				<div class="linksHome">
+					<a href="photos.php">Photography</a> |
+					<a href="films.php">Filmmaking</a> |
+					<a href="other.php">Coding and design</a>
+				</div>
 				<a href="contact.php" class="explore-button">Contact Me</a>
 				<a class="arr-link" href="#section_photo">
 					<img src="images/down_arr.svg" />
