@@ -42,6 +42,7 @@
 	--resource-title-clr: #3b4677;
 	--hobby-bg-clr: #e5e5e5;
 	--hobby-text-clr: #4a5997;
+	--svg-clr: #343e6d;
 }
 
 .darkmode {
@@ -80,6 +81,7 @@
 	--resource-title-clr: #e8ecff;
 	--hobby-bg-clr: #444d72;
 	--hobby-text-clr: #fff;
+	--svg-clr: #7a90f0;
 }
 
 ::-moz-selection {
