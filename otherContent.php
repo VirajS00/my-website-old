@@ -97,7 +97,7 @@
 				</section>
 			</div>
 		</main>
-		<script src="js/prism.js"></script>
+		<script src="js/prism.js?v=1"></script>
 		<script src="js/darkmode.js"></script>
 		<script>
 			const switchT = document.querySelector('.darkmode-toggle');
@@ -122,10 +122,10 @@
 					document.body.querySelector('link').remove();
 				}
 				if (switchT.checked) {
-					link = 'css/prism-duotone-dark.css';
+					link = 'css/prism-duotone-dark.css?v=1';
 					document.body.style.setProperty('--arrow-clr', '#fff');
 				} else {
-					link = 'css/prism.css';
+					link = 'css/prism.css?v=1';
 					window.addEventListener('scroll', changeArrowColour);
 				}
 				const linkTag = document.createElement('link');
@@ -135,10 +135,10 @@
 			});
 
 			if (switchT.checked) {
-				link = 'css/prism-duotone-dark.css';
+				link = 'css/prism-duotone-dark.css?v=1';
 				document.body.style.setProperty('--arrow-clr', '#fff');
 			} else {
-				link = 'css/prism.css';
+				link = 'css/prism.css?v=1';
 				window.addEventListener('scroll', changeArrowColour);
 			}
 			const linkTag = document.createElement('link');
