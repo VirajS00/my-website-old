@@ -12,6 +12,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><?php echo $data->title; ?></title>
+		<meta name="description" content="My name is Viraj Shukla and this project is <?php echo $data->title; ?>" />
+		<meta name="KeyWords" content="Viraj Shukla, personal website, project, <?php echo $data->title; ?>">
 		<link rel="stylesheet" href="css/otherContent.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />

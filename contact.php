@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="My name is Viraj Shukla and I'm a film student, here is my contact info" />
+		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, contact">
 		<title>Contact</title>
 		<link rel="stylesheet" href="css/style.min.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />

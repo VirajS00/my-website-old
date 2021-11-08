@@ -7,6 +7,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Photos Category</title>
+		<meta name="description" content="My name is Viraj Shukla and these are my photos" />
+		<meta name="KeyWords" content="Viraj Shukla, personal website, project, photography, macro photography, nature photography">
 		<link rel="stylesheet" href="css/style.min.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />

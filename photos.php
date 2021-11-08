@@ -15,6 +15,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Photos - <?php echo $category; ?></title>
+		<meta name="description" content="My name is Viraj Shukla and these are my <?php echo $category; ?> photos" />
+		<meta name="KeyWords" content="Viraj Shukla, personal website, project, photography, <?php echo $category; ?> photography">
 		<link rel="stylesheet" href="css/style.min.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />

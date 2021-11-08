@@ -4,9 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Viraj's Site</title>
+		<meta name="description" content="My name is Viraj Shukla and I'm a film student who also loves to do web design and development" />
+		<meta name="KeyWords" content="Viraj Shukla, website, portfolio, web design, web development, filmmaking, personal website">
 		<link rel="stylesheet" href="css/style.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />

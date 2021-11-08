@@ -11,6 +11,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Filmmaking</title>
+		<meta name="description" content="My name is Viraj Shukla and I'm a film student, here are some of my college film projects" />
+		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, filmmaking">
 		<link rel="stylesheet" href="css/style.min.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
