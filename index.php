@@ -128,6 +128,6 @@
 
 		<script src="js/nav.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-		<script src="js/homepage.js"></script>
+		<script src="js/homepage.min.js?v=1"></script>
 	</body>
 </html>
