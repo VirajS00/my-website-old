@@ -76,7 +76,7 @@
 				</div>
 				<a href="contact.php" class="explore-button">Contact Me</a>
 				<a class="arr-link" href="#section_photo">
-					<img src="images/down_arr.svg" />
+					<img src="images/down_arr.svg" alt="down arrow" />
 				</a>
 			</section>
 			<section class="home_page photo_section" id="section_photo">

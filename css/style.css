@@ -9,7 +9,7 @@
 	--title-color: #4a5997;
 	--title-card-color: #3b4677;
 	--camera-svg-pmry: #4a5997;
-	--camera-svg-light: #efefef;
+	--camera-svg-light: #faf9f9;
 	--text-color-default: #000;
 	--bg: #fff;
 	--box-shadow-color: rgba(0, 0, 0, 0.25);
@@ -43,6 +43,9 @@
 	--hobby-bg-clr: #e5e5e5;
 	--hobby-text-clr: #4a5997;
 	--svg-clr: #343e6d;
+	--footer-border-clr: #dfdfdf;
+	--footer-text-clr: #394574;
+	--footer-logo-clr: #394574;
 }
 
 .darkmode {
@@ -82,6 +85,9 @@
 	--hobby-bg-clr: #444d72;
 	--hobby-text-clr: #fff;
 	--svg-clr: #7a90f0;
+	--footer-border-clr: #4b5f8f;
+	--footer-text-clr: #fff;
+	--footer-logo-clr: #fff;
 }
 
 ::-moz-selection {
@@ -1466,3 +1472,31 @@ a[data-type]:hover {
 	}
 }
 /* slider end */
+/* footer start */
+footer {
+	font-family: var(--font-pmry);
+	font-size: 1.1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 1em;
+	color: var(--footer-text-clr);
+	border-top: 0.3em solid var(--footer-border-clr);
+	margin: 2.5em 1em 0 1em;
+}
+
+footer .right {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+footer .right a {
+	opacity: 0.8;
+	transition: opacity 250ms ease;
+}
+
+footer .right a:hover {
+	opacity: 1;
+}
+/* footer end */

@@ -10,7 +10,7 @@
 		<meta name="description" content="My name is Viraj Shukla and these are my coding and design projects" />
 		<meta name="KeyWords" content="Viraj Shukla, personal website, portfolio, web design, web development">
 		<title>Coding and design</title>
-		<link rel="stylesheet" href="css/style.min.css?v=3" />
+		<link rel="stylesheet" href="css/style.min.css?v=4" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
