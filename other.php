@@ -102,6 +102,8 @@
 				</section>
 			</div>
 		</main>
+		<?php include('php/footer.php') ?>
+
 		<script src="js/nav.js"></script>
 		<script src="js/darkmode.js"></script>
 	</body>

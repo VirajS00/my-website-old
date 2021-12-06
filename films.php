@@ -13,7 +13,7 @@
 		<title>Filmmaking</title>
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student, here are some of my college film projects" />
 		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, filmmaking">
-		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/style.min.css?v=1" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -91,8 +91,10 @@
 						echo "</div>";
 					}
 				?>
+			<?php include('php/footer.php') ?>
 			</section>
 		</main>
+
 		<script src="js/nav.js"></script>
 		<script src="js/darkmode.js"></script>
 	</body>

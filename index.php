@@ -9,7 +9,7 @@
 		<title>Viraj's Site</title>
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student who also loves to do web design and development" />
 		<meta name="KeyWords" content="Viraj Shukla, website, portfolio, web design, web development, filmmaking, personal website">
-		<link rel="stylesheet" href="css/style.min.css?v=1" />
+		<link rel="stylesheet" href="css/style.min.css?v=3" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -38,6 +38,14 @@
 
 			a.arr-link > img {
 				transition: transform 250ms ease;
+			}
+
+			footer {
+				--footer-border-clr: #fff;
+				--footer-text-clr: #fff;
+				--footer-logo-clr: #fff;
+				z-index: 1000;
+				bottom: 0;
 			}
 		</style>
 	</head>
@@ -114,8 +122,10 @@
 
 				<h1 class="section-title">Coding and Design</h1>
 				<a href="other.php" class="explore-button">Explore</a>
+				<?php include('php/footer.php') ?>
 			</section>
 		</main>
+
 		<script src="js/nav.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 		<script src="js/homepage.js"></script>

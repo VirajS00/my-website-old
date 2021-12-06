@@ -14,7 +14,7 @@
 		<title><?php echo $data->title; ?></title>
 		<meta name="description" content="My name is Viraj Shukla and this project is <?php echo $data->title; ?>" />
 		<meta name="KeyWords" content="Viraj Shukla, personal website, project, <?php echo $data->title; ?>">
-		<link rel="stylesheet" href="css/otherContent.min.css?v=1" />
+		<link rel="stylesheet" href="css/otherContent.min.css?v=3" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -99,7 +99,9 @@
 				</section>
 			</div>
 		</main>
-		<script src="js/prism.js?v=1"></script>
+		<?php include('php/footer.php') ?>
+
+		<script src="js/prism.js?v=2"></script>
 		<script src="js/darkmode.js"></script>
 		<script>
 			const switchT = document.querySelector('.darkmode-toggle');

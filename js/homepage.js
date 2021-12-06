@@ -56,7 +56,7 @@ const observer3 = new IntersectionObserver((entries, observer) => {
 		if (entry.isIntersecting) {
 			linkTag.href = '#section_top';
 			document.querySelector('a.arr-link > img').style.transform =
-				'rotate(180deg)';
+				'rotate(180deg) translateY(3em)';
 		}
 	});
 }, options);

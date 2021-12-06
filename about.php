@@ -9,7 +9,7 @@
 		<title>About</title>
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student who also loves to do web design and development" />
 		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, about Viraj Shukla">
-		<link rel="stylesheet" href="css/style.min.css?v=2" />
+		<link rel="stylesheet" href="css/style.min.css?v=3" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -78,6 +78,8 @@
 				</div>
 			</section>
 		</main>
+		<?php include('php/footer.php') ?>
+
 		<script src="js/nav.js"></script>
 		<script src="js/darkmode.js"></script>
 	</body>
