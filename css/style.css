@@ -1482,7 +1482,7 @@ footer {
 	padding: 0.5em 1em;
 	color: var(--footer-text-clr);
 	border-top: 0.3em solid var(--footer-border-clr);
-	margin: 2.5em 1em 0 1em;
+	margin: 3em 1em 0 1em;
 }
 
 footer .right {
@@ -1498,5 +1498,18 @@ footer .right a {
 
 footer .right a:hover {
 	opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+		margin: 0;
+		font-size: 0.8rem;
+	}
+
+	footer .right {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+	}
 }
 /* footer end */
