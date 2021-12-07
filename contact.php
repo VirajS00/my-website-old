@@ -9,7 +9,7 @@
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student, here is my contact info" />
 		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, contact">
 		<title>Contact</title>
-		<link rel="stylesheet" href="css/style.min.css?v=1" />
+		<link rel="stylesheet" href="css/style.min.css?v=4" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>

@@ -1,5 +1,5 @@
 <?php
-	// include('webadmin/getData.php');
+	include('webadmin/getData.php');
 	include('php/connect.php');
 	$categ_id = $_GET['categ_id'];
 	$q1 = 'SELECT category FROM images WHERE categ_id = '.$categ_id. ' LIMIT 1';
@@ -17,7 +17,7 @@
 		<title>Photos - <?php echo $category; ?></title>
 		<meta name="description" content="My name is Viraj Shukla and these are my <?php echo $category; ?> photos" />
 		<meta name="KeyWords" content="Viraj Shukla, personal website, project, photography, <?php echo $category; ?> photography">
-		<link rel="stylesheet" href="css/style.min.css?v=1" />
+		<link rel="stylesheet" href="css/style.min.css?v=4" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
