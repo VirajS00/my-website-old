@@ -762,18 +762,30 @@ section.films-grid {
 	width: 100%;
 	background-color: var(--film-hover-bg);
 	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	opacity: 0;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.2em;
 	font-weight: 400;
-	text-transform: uppercase;
 	transition: opacity 350ms ease;
 	border-radius: 9px;
+}
+
+.filmTitle p.title {
 	text-align: center;
 	font-family: var(--font-pmry);
 	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1em;
 }
+
+.filmTitle p.role {
+	font-family: var(--font-pmry);
+	font-weight: bold;
+}
+
 .filmL {
 	text-decoration: none;
 	color: #fff;
@@ -838,17 +850,27 @@ section.films-grid {
 	height: 100%;
 }
 
-.filmE > .right-side > h1.title {
+.filmE .right-side .title_id {
+	padding: 20px 10px;
+}
+
+.filmE .right-side .title_id p {
+	color: #6d80ff;
+	font-family: var(--font-pmry);
+}
+
+.filmE .right-side h1.title {
 	color: #eee;
 	font-weight: 400;
 	font-family: var(--font-pmry);
-	padding: 20px 10px;
 }
 
 .filmE > .right-side > p.desc {
 	color: #eee;
 	font-family: var(--font-pmry);
 	padding: 0 10px;
+	max-height: 200px;
+	overflow-y: scroll;
 }
 
 .filmE > .right-side > p.desc > a {
@@ -919,6 +941,10 @@ section.films-grid {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.filmE > .right-side > p.desc {
+		max-height: 400px;
 	}
 }
 
