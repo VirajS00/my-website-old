@@ -9,7 +9,7 @@
 		<title>About</title>
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student who also loves to do web design and development" />
 		<meta name="KeyWords" content="Viraj Shukla, website, personal website, portfolio, about Viraj Shukla">
-		<link rel="stylesheet" href="css/style.min.css?v=3" />
+		<link rel="stylesheet" href="css/style.min.css?v=6" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -67,6 +67,7 @@
 					<ul class="hobbies">
 						<li class="hobby">Photography</li>
 						<li class="hobby">Filmmaking</li>
+						<li class="hobby">Figma</li>
 						<li class="hobby">HTML</li>
 						<li class="hobby">CSS</li>
 						<li class="hobby">JavaScript</li>

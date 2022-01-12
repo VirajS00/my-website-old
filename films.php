@@ -34,8 +34,8 @@
 	<body>
 		<div class="embedLinks" id="embedLinks">
 			<?php
-				$key = YOUR_KEY_HERE;
-				$token = YOUR_ACCESS_TOKEN_HERE;
+				$key = YOUR_API_KEY;
+				$token = YOUR_ACCESS_TOKEN;
 				$url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=PLNUNNqPwkQe-67Wlv8WkoK7fZO96I07wf&access_token=$token&key=$key";
                 $client = curl_init($url);
 				curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
