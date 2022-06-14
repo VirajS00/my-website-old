@@ -11,16 +11,39 @@ const disableDarkMode = () => {
 	localStorage.setItem('darkMode', null);
 };
 
-if (darkMode === 'enabled') {
-	enableDarkMode();
-	toggleSwitch.setAttribute('checked', '');
-}
-
 toggleSwitch.addEventListener('click', () => {
 	darkMode = localStorage.getItem('darkMode');
 	if (darkMode !== 'enabled') {
 		enableDarkMode();
+		toggleSwitch.setAttribute('checked', 'checked');
 	} else {
 		disableDarkMode();
+		toggleSwitch.setAttribute('checked', '');
 	}
 });
+
+if(localStorage.getItem('darkMode') !== 'enabled') {
+	if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		enableDarkMode();
+		toggleSwitch.setAttribute('checked', 'checked');
+	} else {
+		disableDarkMode();
+		toggleSwitch.setAttribute('checked', '');
+	}
+} else {
+	enableDarkMode();
+	toggleSwitch.setAttribute('checked', 'checked');
+}
+
+
+// window
+//   .matchMedia('(prefers-color-scheme: dark)')
+//   .addEventListener('change', ({matches:isDark}) => {
+//     if(isDark) {
+// 		enableDarkMode();
+// 		toggleSwitch.setAttribute('checked', 'checked');
+// 	} else {
+// 		disableDarkMode();
+// 		toggleSwitch.setAttribute('checked', '');
+// 	}
+//   })

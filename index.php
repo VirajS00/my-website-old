@@ -1,5 +1,5 @@
 <?php
-	include('webadmin/getData.php');
+include 'webadmin/getData.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
 		<title>Viraj's Site</title>
 		<meta name="description" content="My name is Viraj Shukla and I'm a film student who also loves to do web design and development" />
 		<meta name="KeyWords" content="Viraj Shukla, website, portfolio, web design, web development, filmmaking, personal website">
-		<link rel="stylesheet" href="css/style.min.css?v=3" />
+		<link rel="stylesheet" href="css/style.min.css?v=9" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 		<style>
@@ -47,6 +47,15 @@
 				z-index: 1000;
 				bottom: 0;
 			}
+
+			.extra-items {
+				background-image: linear-gradient(transparent, rgb(0 0 0 / .5));
+				background-color: transparent;
+			}
+
+			.extra-items::after {
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -56,11 +65,23 @@
 				<li class="nav-li">
 					<a href="index.php" class="nav-link active">Home</a>
 				</li>
-				<li class="nav-li">
+				<li class="nav-li dropdown">
 					<a href="photoCateg.php" class="nav-link">Photos</a>
+					<ul class="extra-items">
+						<li><a href="photos.php?categ_id=3">Macro</a></li>
+						<li><a href="photos.php?categ_id=2">Nature</a></li>
+						<li><a href="photos.php?categ_id=1">Abstract</a></li>
+					</ul>
 				</li>
-				<li class="nav-li">
+				<li class="nav-li dropdown">
 					<a href="films.php" class="nav-link">Filmmaking</a>
+					<ul class="extra-items">
+						<li><a href="filmCateg.php?category=demo_reel">Demo Reel</a></li>
+						<li><a href="filmCateg.php?category=fiction">Fiction</a></li>
+						<li><a href="filmCateg.php?category=non_fiction">Non Fiction</a></li>
+						<li><a href="filmCateg.php?category=corporate_videos">Corporate Videos</a></li>
+						<li><a href="filmCateg.php?category=other">Other</a></li>
+					</ul>
 				</li>
 				<li class="nav-li">
 					<a href="other.php" class="nav-link">Coding and Design</a>
@@ -100,7 +121,7 @@
 				<div class="home_section_overlay"></div>
 				<div class="video-background">
 					<iframe
-						src="https://www.youtube.com/embed/xIMf_QEciKI?playlist=xIMf_QEciKI&controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1"
+						src="https://www.youtube.com/embed/-ShcfcRD1iQ?playlist=-ShcfcRD1iQ&controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1"
 						frameborder="0"
 						allowfullscreen
 					></iframe>
@@ -122,7 +143,7 @@
 
 				<h1 class="section-title">Coding and Design</h1>
 				<a href="other.php" class="explore-button">Explore</a>
-				<?php include('php/footer.php') ?>
+				<?php include 'php/footer.php'; ?>
 			</section>
 		</main>
 

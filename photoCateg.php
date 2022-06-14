@@ -1,5 +1,5 @@
 <?php
-	include('webadmin/getData.php');
+include 'webadmin/getData.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
 		<title>Photos Category</title>
 		<meta name="description" content="My name is Viraj Shukla and these are my photos" />
 		<meta name="KeyWords" content="Viraj Shukla, personal website, project, photography, macro photography, nature photography">
-		<link rel="stylesheet" href="css/style.min.css?v=3" />
+		<link rel="stylesheet" href="css/style.min.css?v=9" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="apple-touch-icon" href="images/favicon.png" />
 	</head>
@@ -18,9 +18,22 @@
 			<img src="images/logo.svg" alt="logo" class="nav-img" />
 			<ul class="nav-ul">
 				<li class="nav-li"><a href="index.php" class="nav-link">Home</a></li>
-				<li class="nav-li"><a href="photoCateg.php" class="nav-link active">Photos</a></li>
-				<li class="nav-li">
+				<li class="nav-li dropdown active"><a href="photoCateg.php" class="nav-link active">Photos</a>
+					<ul class="extra-items">
+						<li><a href="photos.php?categ_id=3">Macro</a></li>
+						<li><a href="photos.php?categ_id=2">Nature</a></li>
+						<li><a href="photos.php?categ_id=1">Abstract</a></li>
+					</ul>
+				</li>
+				<li class="nav-li dropdown">
 					<a href="films.php" class="nav-link">Filmmaking</a>
+					<ul class="extra-items">
+						<li><a href="filmCateg.php?category=demo_reel">Demo Reel</a></li>
+						<li><a href="filmCateg.php?category=fiction">Fiction</a></li>
+						<li><a href="filmCateg.php?category=non_fiction">Non Fiction</a></li>
+						<li><a href="filmCateg.php?category=corporate_videos">Corporate Videos</a></li>
+						<li><a href="filmCateg.php?category=other">Other</a></li>
+					</ul>
 				</li>
 				<li class="nav-li">
 					<a href="other.php" class="nav-link">Coding and Design</a>
@@ -63,9 +76,9 @@
 				</div>
 			</section>
 		</main>
-		<?php include('php/footer.php') ?>
+		<?php include 'php/footer.php'; ?>
 
 		<script src="js/nav.js"></script>
-		<script src="js/darkmode.js"></script>
+		<script src="js/darkmode.js?v=1"></script>
 	</body>
 </html>
